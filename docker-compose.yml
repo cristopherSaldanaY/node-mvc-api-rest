@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mysql-server:
+    image: mysql:8
+    container_name: cont-mysqlserver-mvc
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=adminUser
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=bddnodemvc
+    ports:
+      - "3314:3306"
+    volumes:
+      - data-mysql-volume-project:/var/lib/mysql
+volumes:
+  data-mysql-volume-project:
