@@ -14,7 +14,7 @@ export const AppDataSource = new DataSource({
   username: "adminUser",
   password: "root",
   database: "bddnodemvc",
-  logging: true,
+  logging: false,
   entities: [User, Project, Task, Tag],
   synchronize: true,
   migrations: [],
